@@ -1,0 +1,48 @@
+<p>test works!</p>
+<hr>
+<!-- [] - Property Binding -->
+
+<!-- {{ }} text -->
+<!-- Disabled => true -->
+<button (click)="enableText()"> Enable Input Text</button>
+
+<input type="text" [disabled]="isDisabled" id="{{anID}}" value="Something" />
+
+<!------------------------------------------------------ -->
+<hr>
+<!-- Class Binding -->
+
+<h4 [class.text-danger]="hasError">Elective 3</h4>
+
+<!-- ngClass -->
+<h4 [ngClass]="setofClasses">Elective 3</h4>
+<hr>
+<!-- ----------------------------------------------------- -->
+<!-- 2 Way Binding [()] -->
+<input type="text" [(ngModel)]="myValue" />
+{{ myValue }}
+<!-- 
+<textarea name="" id="" cols="30" rows="10">
+</textarea> -->
+
+<!-- ----------------------------------------------------- -->
+<hr>
+<!-- Event Binding -->
+<button 
+    (click)="enableBinding()"
+    [ngClass]="{'green' : toggle, 'red': !toggle}"
+> 
+{{ status }}
+</button>
+
+<!-- 
+    
+    Toggle -> Success (status)
+    !Toggle -> Warning (status) 
+
+-->
+
+
+
+<hr>
+<button mat-raised-button color="primary">Primary</button>
